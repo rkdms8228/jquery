@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	이름:<input type="text" name="name" value="" /><br>
+	비밀번호:<input type="password" name="password" value="" /><br>
+	<textarea name="content"></textarea>
+	<br><br>
+	이름2:<input type="text" name="name2" value="홍길동"/><br>
+	비밀번호2:<input type="password" name="password2" value="1234"/><br>
+	<textarea name="content2">산토끼토끼야</textarea>
+	
+</body>
+	
+	<script type="text/javascript">
+		
+		$("[name=name]").val("김가은");
+		$("[name=password]").val("1234");
+		$("[name=content]").val("쿵야 좋아");
+		//$("[name=content]").text("쿵야 좋아");
+		
+		var name = $("[name=name2]").val();
+		console.log(name);
+
+		var pw = $("[name=password2]").val();
+		console.log(pw);
+		
+		var content = $("[name=content2]").val();
+		console.log(content);
+	
+	</script>
+
+</html>
