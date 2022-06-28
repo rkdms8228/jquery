@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫 번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두 번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세 번째 아이템입니다.</li>
+		<li><strong>네 번째 아이템입니다.</strong></li>
+		<li id="four" class="del">다섯 번째 아이템입니다.</li>
+		
+	</ul>
+
+</body>
+
+	<script type="text/javascript">
+		
+	/*
+		$("#first").on("click", function() {
+			var str = $("#first").text();
+			console.log(str);
+		});
+		
+		$("#second").on("click", function() {
+			var str = $("#second").text();
+			console.log(str);
+		});
+		
+		$("#third").on("click", function() {
+			var str = $("#third").text();
+			console.log(str);
+		});
+	*/
+	
+		$("li").on("click", function() {
+			
+			//$(this) 중요
+			var $this = $(this);
+			
+			//text구하기
+			var str = $this.text();
+			console.log(str);
+			
+			//class의 이름 구하기
+			var cName = $this.attr("class");
+			console.log(cName);
+			
+			//id명 구하기
+			var idName = $this.attr("id");
+			console.log(idName);
+			
+		});
+	
+	</script>
+
+</html>
