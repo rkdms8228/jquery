@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+	</ul>
+	
+	<button id="btn" type="button">li요소추가</button>
+	
+</body>
+
+	<script type="text/javascript">
+	
+		//버튼을 클릭했을 때
+		$("#btn").on("click", function() {
+			
+			console.log("버튼 클릭");
+			
+			$("ul").append("<li>다섯 번째 아이템입니다.</li>");
+			$("ul").append("<li>여섯 번째 아이템입니다.</li>");
+			$("ul").append("<li>일곱 번째 아이템입니다.</li>");
+			
+		});
+	
+		/*
+		//li태크를 클릭했을 때 --> jquery 추가한 li태그 때문에 안 됨
+		$("li").on("click", function() {
+			
+			console.log("li태크 클릭");
+			
+		});
+		*/
+		
+		//li태그를 클릭했을 때, 부모한테 클릭 이벤트를 주고 자식에게 위임
+		$("ul").on("click", "li", function() {
+			
+			console.log("li 클릭");
+			
+			$this = $(this);
+			var str = $this.text();
+			console.log(str);
+			
+		});
+		
+	</script>
+
+</html>
